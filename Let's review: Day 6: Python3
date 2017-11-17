@@ -1,0 +1,18 @@
+T = int(input()) #taking integer input
+
+x=[] #Initialize the list
+
+for j in range(0,T):    # helps in inserting input to a the list x.
+    x.insert(j,input())
+
+for i in range(0,T):    # prints those letters which are at even number indices    
+    
+    for l in range(0,len(x[i])):
+        if l%2==0:
+            print (x[i][l],end='')
+    print(" ", end='')  # puts a space between the even and odd index output and makes the cursor stay at last printed output position
+        
+    for l in range(1,len(x[i])): # prints those letters which are at odd number indices
+        if l%2!=0:
+            print (x[i][l],end='')  # end ='' makes the cursor go to the end of the last printed output and not to the next new line 
+    print("")
